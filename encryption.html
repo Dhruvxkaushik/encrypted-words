@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Encryption and Decryption Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="encryption.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+      }
+      h1 {
+        margin-top: 0px;
+        /* margin-bottom: 20px; */
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 20px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        margin-bottom: 30px;
+      }
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #2E8B57;
+      }
+      p {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        width: 500px; /* Add this line */
+        margin: auto;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 375px) {
+        input[type="text"] {
+          width: 80%;
+          font-size: 1.2rem;
+        }
+        button {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+        }
+        p {
+          width: 80%;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Encrypted Words Made with 💖 By Dhruv</h1>
+      <input type="text" id="text" placeholder="Enter text to encrypt/decrypt" />
+      <br />
+      <button onclick="encrypt()">Encrypt</button>
+      <button onclick="decrypt()">Decrypt</button>
+      <br />
+      <label>Encrypted Text:</label>
+      <p id="encryptedText"></p>
+      <label>Decrypted Text:</label>
+      <p id="decryptedText"></p>
+    </div>
+  </body>
+</html>
